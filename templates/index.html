@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Auto type</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
+    />
+    >
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="sample">
+      <h2 id="text"></h2>
+    </div>
+    <!-- partial -->
+    <script>
+        function writer(text, element, duration) {
+        text = text || "Sample Text";
+        element = element || document.body;
+        duration = duration || 200;
+        let len = text.length;
+        let i = 0;
+        let loop = setInterval(() => {
+          if (i == len) {
+            clearInterval(loop);
+          } else {
+            element.innerHTML += text[i];
+          }
+          i++;
+        }, duration);
+      }
+      var txt ="{{value | safe}}";
+      writer(txt, document.getElementById("text"), 100);
+    </script>
+  </body>
+</html>
