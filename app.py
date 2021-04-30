@@ -23,6 +23,7 @@ def getadvice():
         return(p)
 def mm  (x):
     return(" ".join(map(str,x)))
+    
 if __name__ == '__main__':
     app.run(debug=True)
 
