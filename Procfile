@@ -1,1 +1,1 @@
-web: gunicorn app:KittenAdice
+web: gunicorn app:app
