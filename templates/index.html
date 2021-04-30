@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CodePen - Auto type</title>
+    <title>Kitten Advice</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -17,7 +17,7 @@
     </div>
     <!-- partial -->
     <script>
-        function writer(text, element, duration) {
+      function writer(text, element, duration) {
         text = text || "Sample Text";
         element = element || document.body;
         duration = duration || 200;
@@ -32,7 +32,7 @@
           i++;
         }, duration);
       }
-      var txt ="{{value | safe}}";
+      var txt = "{{value | safe}}";
       writer(txt, document.getElementById("text"), 100);
     </script>
   </body>
